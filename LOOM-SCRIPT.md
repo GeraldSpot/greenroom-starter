@@ -1,6 +1,11 @@
 # Loom Walkthrough Script — Smart Expense Audit
 ## Target: 5–8 minutes | Screen + Cam
 
+**Demo show:** Park Avenue · May 9, 2026 (`show_0182`)
+- Settlement badge: **Disputed**
+- Sign-off prose: "OK. Good night." (contradicts badge — the key demo point)
+- Deal notes: "Expenses to 650" (the cap the AI will cite)
+
 ---
 
 ## INTRO (0:00 – 0:45)
@@ -14,10 +19,10 @@
 
 ## THE PROBLEM (0:45 – 1:45)
 
-**Action:** Click into **show_0038** (Sunday Drivers) → click **Settle**
+**Action:** Scroll to find **Park Avenue** (May 9) in the shows list → click into it → click **Settle**
 
 **Say:**
-> "Here's a real show — Sunday Drivers, July 10th. Notice the settlement badge says 'Disputed'..."
+> "Here's a real show — Park Avenue, May 9th. Notice the settlement badge says 'Disputed'..."
 
 **Action:** Scroll down to the Sign-off & notes section
 
@@ -27,7 +32,7 @@
 **Action:** Scroll back up and point out the deal notes
 
 **Say:**
-> "The deal notes say 'Expenses to 700' — that's Mariana's source of truth for what's recoopable. No structured field captures this reliably. It's just prose."
+> "The deal notes say 'Expenses to 650' — that's Mariana's source of truth for what's recoopable. No structured field captures this reliably. It's just prose."
 
 ---
 
@@ -50,7 +55,7 @@
 **Wait for result (3–8 seconds)**
 
 **Say (reading the verdict):**
-> "It extracted $415, categorized it as 'marketing', status is 'Approved', and the audit note says: 'Within the $700 expense cap noted in the deal terms.' It cited the specific clause from the prose. That's the sentence Mariana reads aloud to the TM at 2am to close the conversation."
+> "It extracted $415, categorized it as 'marketing', status is 'Approved', and the audit note cites the specific clause: 'Within the $650 expense cap noted in the deal terms.' That's the sentence Mariana reads aloud to the TM at 2am to close the conversation."
 
 **Action:** Point out the amber "prose override" callout if it appears
 
@@ -69,12 +74,12 @@
 **Action:** Click "Audit another receipt" → select `4-social-ads-OVER-CAP-780.eml`
 
 **Say:**
-> "Now a harder case — a $780 social media invoice that exceeds the $700 expense cap."
+> "Now a harder case — a $780 social media invoice that exceeds the $650 expense cap."
 
 **Wait for result**
 
 **Say:**
-> "Status: Flagged. The audit note says 'Exceeds the $700 expense cap by $80. Recommend recouping only $700.' It even tells Mariana what to do. She can still approve it if she wants — she's the decision-maker, not the AI — or reject it. That's the design principle: AI flags, human decides."
+> "Status: Flagged. The audit note says it exceeds the cap and recommends recouping only $650. It tells Mariana what to do. She can still approve it if she wants — she's the decision-maker, not the AI — or reject it. That's the design principle: AI flags, human decides."
 
 **Action:** Click **"Reject"** (to show both paths)
 
@@ -90,7 +95,7 @@
 **Action:** Upload `2-pucketts-hospitality-118.eml`
 
 **Say:**
-> "One more — a deli receipt. BBQ platter, banana pudding for the greenroom. The model categorizes it as 'hospitality_overage', extracts $118.81 to the penny, approves it within the cap. Different category, same flow."
+> "One more — a deli receipt. BBQ platter, banana pudding for the greenroom. The model categorizes it as 'hospitality overage', extracts $118.81 to the penny, approves it within the cap. Different category, same flow."
 
 ---
 
@@ -130,3 +135,4 @@
 - **If Gemini is slow:** Fill the wait with "It's reading the receipt and cross-referencing against the deal terms..." — the loading state has copy that supports this.
 - **If something errors:** The error state is clean; just say "Let me try that again" and use a different receipt file. The error handling is part of the product quality.
 - **Face cam:** Position bottom-left so it doesn't cover the audit section (which is center-right on the page).
+- **URL to navigate to:** `http://localhost:3000/shows/show_0182/settle`
