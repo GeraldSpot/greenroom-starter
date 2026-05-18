@@ -29,6 +29,7 @@ import {
 } from "@/lib/format";
 import type { Settlement, Recoup } from "@/db/schema";
 import { Logomark } from "@/components/brand/logo";
+import { SmartExpenseAudit } from "./smart-audit";
 
 const RECOUP_LABELS: Record<Recoup["category"], string> = {
   marketing: "Marketing",
@@ -143,6 +144,8 @@ export default async function SettlePage({
         )}
 
         {recoups.length > 0 && <RecoupsSection recoups={recoups} />}
+
+        <SmartExpenseAudit showId={show.id} />
 
         {settlement && (settlement.signoffText || settlement.notes) && (
           <SignoffSection settlement={settlement} />
