@@ -1,0 +1,24 @@
+From: ads-billing@spotify.com
+To: mariana@thecrescent.com
+Subject: Receipt: Pre-show Spotify campaign — Park Avenue
+Date: Mon, 5 May 2026 14:30:00 -0500
+Content-Type: text/plain
+
+Hi Mariana,
+
+Here's your receipt for the pre-show Spotify ad campaign
+for Park Avenue at The Crescent on May 9.
+
+Campaign: Nashville indie listeners, 18-34, 4-day flight
+Geo: Nashville DMA, 25mi radius
+Impressions: 142,118
+
+  Audio ads........................$320.00
+  Display (Discover Weekly)........$95.00
+
+                        TOTAL: $415.00
+
+Charged to Visa ending 4421.
+Transaction ID: SP-2026-77412
+
+Thanks for using Spotify Ads!

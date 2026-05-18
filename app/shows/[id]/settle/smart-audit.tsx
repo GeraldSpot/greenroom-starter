@@ -223,7 +223,7 @@ function Dropzone({
         ref={inputRef}
         id="smart-audit-file"
         type="file"
-        accept="image/*,.pdf,.eml"
+        accept="image/*,.pdf,.eml,.txt"
         className="sr-only"
         onChange={onChange}
       />

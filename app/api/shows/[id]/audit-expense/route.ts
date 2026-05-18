@@ -30,7 +30,7 @@ const ACCEPTED_EXACT_MIME = new Set([
   "message/rfc822", // .eml
   "text/plain", // some browsers report .eml as text/plain
 ]);
-const ACCEPTED_EXTENSIONS = [".pdf", ".eml", ".png", ".jpg", ".jpeg", ".webp", ".heic"];
+const ACCEPTED_EXTENSIONS = [".pdf", ".eml", ".txt", ".png", ".jpg", ".jpeg", ".webp", ".heic"];
 const MAX_FILE_BYTES = 8 * 1024 * 1024; // 8MB — Gemini inline-data ceiling is 20MB; we stay well under.
 
 function fileLooksAccepted(file: File): boolean {
